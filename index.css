@@ -1,0 +1,123 @@
+/*CSS du menu de navigation seulement ! */
+
+body{
+    margin:0;
+    padding:0;
+}
+
+
+.menu {
+    list-style-type: none; /*pas de décoration*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2A4858;
+    font-family: Times;
+    font-size: 120%;
+
+    /*Utilisation de flexbox*/
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:stretch;
+}
+
+ul li {
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+
+}
+
+ul li a{
+    
+}
+
+li a, .ul {
+    display: inline-block; /*permet de pourvoir même une hauteur et une largeur*/
+    color: white;
+    text-align: center;
+    padding: 2px 16px; /*hatuteur du menu*/
+    text-decoration: none;
+    width: 120px /*toutes les cases de la meme taille*/
+}
+
+li:hover, .Documents:hover .menuder {
+    background-color: #42838E;
+
+}
+
+li.Documents {
+    display: inline-block;
+    padding: 12px;
+
+
+}
+
+.Documents-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 12px;
+}
+
+.Documents-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.Documents-content a:hover {
+  background-color: #f1f1f1;
+  width: 148px; /*quand on passe la souris dans répertoire*/
+
+}
+
+.Documents:hover .Documents-content {
+    display: block;
+}
+nav li:last-child {
+  margin: 0 0 0 auto;
+}
+
+
+/*last-child sélectionne le dernier élément <li> du parent <ul>*/
+ul li:last-child { 
+  margin:0 0 0 auto;
+}
+
+
+
+
+
+.information{
+    position: absolute;
+    top: 50px;left: 0;right: 0;
+    color: #fff;
+    font-family: roboto;
+}
+
+.img_texte {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 300%;
+}
+
+.container {
+    position: fixed;
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+
+
