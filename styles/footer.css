@@ -1,0 +1,38 @@
+footer{
+	height: 200px;
+	background-color: #FCFCFC;
+	display: flex;
+	flex-direction: row;
+
+}
+
+p{
+	color: #959595;
+}
+
+h3{
+	color: #212121;
+	font-family: Ubuntu;
+}
+
+
+footer > div{
+	width: 25%;
+	margin-left: 25px;
+
+}
+
+
+
+.socialmedia{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+	vertical-align: middle;
+}
+
+span{
+	margin-top: 6px;
+}
