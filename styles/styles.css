@@ -1,0 +1,629 @@
+/* =======================================================
+
+                  CSS BARRE DE NAVIGATION
+
+ =========================================================*/
+
+body{
+  margin:0;
+  padding:0;
+  max-width: 100%; /*scrolbar x*/
+  overflow-x: hidden;  /*scrollbar x caché*/
+}
+
+.menu{
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none; /*pas de décoration pour la liste*/
+
+  display: flex; /*Permet un contexte flexible pour tous ses enfants directs. */
+  flex-direction: row; /*affichage en ligne*/
+  justify-content: flex-end; /*les éléments sont regroupés en début de ligne*/
+
+  background-color: #ffffff; 
+  font-family: Ubuntu; /*police Unbuntu chargée dans le HTML*/
+  font-size: 22px;
+  color: white;
+  box-shadow: 0 8px 6px -6px #999; /*ombre*/
+
+
+} 
+
+
+.produits{
+  background-color: #E67E22; /*orange*/
+}
+/*
+  éléments des balises <a> du parent indirect <ul>
+*/
+nav ul a{ 
+  text-decoration: none; /*aucune décoration*/
+  color: #4a4a4a;
+}
+
+
+/*
+  éléments des balises <li>
+*/
+nav li a{
+  width: 180px; /*largeur des éléments*/
+  height: 100px; /*hauteur des éléments (-> hauteur navbar*/
+  margin-left: 6px;
+  margin-right: 6px;
+
+  text-align: center; /*forcer le centrement horizontale pour les colonnes à 2 lignes de texte*/
+
+  display: flex; 
+  align-items: center; /*centrage vertical via flexbox*/
+  justify-content: center; /*centrage horizontal via flexbox*/
+}
+
+
+/*
+  quand je passe la souris sur un élément <li>
+*/
+nav li:hover{ 
+  background-color: #fafafa;
+  
+}
+
+.documents-content{
+  display: none; /*cache le menu déroulant */
+  position: absolute; /*positionnée par rapport à son ancêtre le plus proche*/ 
+  width: inherit; /*l'épaisseur est héritée du parent*/
+  flex-direction: column; /* alignement en colonne */
+}
+
+.documents:hover > .documents-content{
+  display: flex; /* Permet un contexte flexible pour tous ses enfants directs. */
+  background-color: #d1d9e1; /* couleur des sous-menus */
+}
+
+.documents-content a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+/* =======================================================
+
+                  CSS FOOTER
+
+ =========================================================*/
+
+footer{
+  position: relative;
+  top: 200px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 200px;
+  background-color: #201E1C;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: Open Sans;
+}
+
+footer h3{
+  text-align: center;
+  font-family: Ubuntu;
+}
+
+/* Chaque section prend 1/3 de la page */
+footer  ul{
+  width: 33%;
+  text-align: center;
+
+}
+
+footer li {
+  list-style-type: none;
+
+}
+
+/* espace entre les logos des réseaux sociaux */
+footer li span img {
+ margin-top: 6px;
+}
+
+/* ============================================
+   Elément a
+   ============================================*/
+
+footer a{
+  display: flex;
+  flex-direction: column; /* alignement des liens hypertextes en colonne */
+  text-decoration: none;  /* aucune décoration sur les liens */
+  color: white;
+  line-height: 20px;
+}
+
+footer a:hover{
+  text-decoration: underline; /* Souligner le lien lorsque je passe la souris dessus */
+}
+
+
+/* ============================================
+   Elément colonne de droite
+   ============================================*/
+.copyright{
+  position: absolute; /* permet de positionner le texte librement */
+  margin-left: 25px;
+  bottom: 10px;
+  color: #4C4B4A;
+}
+
+
+/* ============================================
+   Elément colonne centrale 
+   ============================================*/
+footer .navigation{
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}
+
+
+/* ============================================
+   Elément colonne de droite
+   ============================================*/
+footer .socialmedia{
+  display: flex;
+  flex-direction: column; /*alignement des réseaux sociaux en colonne */
+}
+
+footer img{
+  vertical-align: middle;
+}
+
+footer .facebook, .twitter, .instagram{
+  margin-top: 6px;
+}
+
+
+
+/* =======================================================
+
+                CSS PAGE INDEX
+
+ =========================================================*/
+
+/* Mise en forme de la division contenant les 2 colonnes */
+.intro-colonnes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+
+/* colonne de gauche */
+.intro-colonne-gauche {
+  width: 500px;
+  height: auto;
+  margin-right: 25px;
+}
+.intro-code {
+  background: #242424;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  line-height: 20px;
+  padding: 15px 25px;
+  position: relative;
+}
+
+/* colonne de droite */
+.intro-colonne-droit .intro-image {
+  width: 500px;
+  height: auto;
+  margin-left: 25px;
+}
+
+
+
+/* image svg */
+.svg-triangle{ 
+  margin-top: 10%; 
+  width: 120%;
+  margin-left: -10%;
+}
+
+/* texte superpositionné sur le triangle */
+.texte-triangle {
+  position: absolute;
+  margin-top: 12%;
+  color: white;
+  font-size: 40px;
+  font-family: Ubuntu;
+  left: 50%;
+
+}
+
+
+
+
+/* mise en forme de tout les images et textes de redirection */
+#index .content-redirection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  justify-content: space-around;
+    
+}
+
+
+
+/* Style des division contenant les images et textes de redirection */
+#index .image-texte{
+  font-size: 40px;
+  font-family: Ubuntu;
+  text-align: center;
+  box-shadow: 6px 8px 6px -6px #999; /*ombre*/
+  height: 450px;
+  width: 400px;
+}
+
+/* FlatIcon illustrant les redirections */
+#index .image-redirection {
+  height: 150px;
+  width: 150px;
+}
+
+#index .titre-redirection {
+  margin-top: 75px;
+  font-weight: bold;
+}
+
+/* Mise en forme des liens de redirection */
+#index a {
+  text-decoration: none;
+  color: black;
+  transition: width 0s, height 0s;
+}
+
+/* Mise en forme des liens de redirection quand on passe la souris dessus*/
+#index a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =======================================================
+
+                CSS PAGE QUI SOMMES-NOUS
+
+ =========================================================*/
+
+#QSN h1{
+  margin-top: 7%;
+  text-align: center;
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+#QSN .introduction{
+  text-align: center;
+  font-size: 180%;
+}
+
+#QSN .equipe{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /*permet un retour à la ligne lorque l'écran est diminué */
+  text-align: center;
+  font-family: open sans, sans-serif;
+  font-size: 17px;
+}
+
+#QSN .equipe div{
+  height: 400px; /*hauteur des blocs des membres*/
+  width: 400px;  /*largeur des blocs des membres*/
+  margin-top: 5%; /*espace entre les 2 lignes des blocs des membres */
+  background: #F8F8F8;
+}
+
+#QSN img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#QSN .prenom{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* =======================================================
+
+                CSS PAGE PRODUITS
+
+ =========================================================*/
+
+#produits{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10%
+}
+
+
+
+
+/* =======================================================
+
+                CSS PAGES TEXTE
+
+ =========================================================*/
+
+#texte {
+  margin-left: 30px;
+  width: 90%;
+
+}
+
+#texte h1 {
+  text-align: center;
+  font-family: Ubuntu;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  text-decoration-line: overline underline; /*tire avec bordure au dessus et en dessous*/
+  font-size: 50px;
+}
+
+#texte p {
+  font-size: 22px;
+  font-family: open sans
+}
+
+#texte li {
+  font-size: 22px;
+  font-family: open sans
+}
+
+/* Bordure au dessus des titres */
+#texte h2 {
+  font-size: 37px;
+  border-top: 3px solid #3d7e9a;
+  margin-top: 50px;
+  padding: 17px;
+}
+
+#texte h3{
+  font-size: 24px;
+  font-family: Ubuntu;
+ 
+}
+
+#texte .titre {
+  list-style-type: none;
+}
+
+#texte .sous-titre {
+   list-style-type: disc;
+}
+
+#texte .introduction {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#texte .introduction p {
+  text-align: center;
+}
+
+#texte summary {
+  font-size: 24px;
+  font-family: Ubuntu;
+}
+
+#texte details a {
+  font-size: 24px;
+  font-family: Ubuntu;
+}
+
+details {
+    border: 1px solid #aaa; /* encadrer les balises détails en entière */
+    border-radius: 4px;
+    padding: 10px 10px 0;
+}
+
+summary {
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+/* Quand j'ouvre un onglet "détail" */
+details[open] {
+    padding: 10px;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa; /* bordure sous le titre de l'élément à ouvrir */
+}
+
+
+/* =======================================================
+
+                CSS PAGE CONTACT
+
+ =========================================================*/
+
+.formulaire-contenaire {
+  width: 50%;
+  height: 30%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Champs de saisis */
+#contact input[type=text], input[type=email],select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none; /*redimmensionner la zone de texte : non */
+}
+
+/* Bouton */
+#contact input[type=submit], input[type=reset] {
+  background-color: #3d7e9a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px; /* arrondir les angles */
+  cursor: pointer; /* modification du curseur */
+}
+
+#contact input[type="submit"]:hover, input[type=reset]:hover{
+    cursor: pointer;
+    background-color: #ffc107;
+    color: #000000;
+}
+
+
+#contact h2 {
+  text-align: center;
+  font-family: Ubuntu;
+}
+
+#contact textarea {
+  height:200px
+}
+
+
+/* =======================================================
+
+                CSS PAGE CONNEXION
+
+ =========================================================*/
+.loginbox {
+    width: 440px;
+    height: 520px;
+    background-color: #f2f2f2;
+    left: 50%;
+    color: #000;
+    position: relative;
+    transform: translate(-50%, 50%); /* centrer le tout */
+    box-sizing: border-box;
+    padding: 70px 30px;
+    font-family: Ubuntu;
+    margin-bottom: 130px;
+}
+
+
+h1 {
+    margin: 0px;
+    padding: 0 0 30px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.loginbox label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+}
+
+
+.loginbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #3d7e9a;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #ffc107;
+    color: #000000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+
+
+/* ======================================================================= 
+   Mise en place du responsive
+   ======================================================================*/
+
+
+@media (max-width: 1388px){
+  .menu{
+    font-size: 18px;
+  }
+
+  nav li a{
+    width: 140px; /*largeur des éléments*/
+    height: 90px;
+  }
+
+
+  #index .image{
+    margin-left: 80px;
+    margin-top: 80px;
+    }
+
+  #index .image_index{
+    margin: 40px;
+    height: 84px;
+    }
+
+  #index .span_index{
+    font-size: 36px;
+    }
+
+  #index .presentation{
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+
+

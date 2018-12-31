@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" >
+		<title>Les mots de passe</title>
+
+		<link rel="stylesheet" href="../styles/styles.css">
+
+
+		<!--- Polices google font utilisées -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+		<meta name="author" content="HackerGroups">
+		<meta name="description" content="Les mots de passe sont très important. Apprenez à les rendre difficile d'accès">
+
+		<!-- lien pour ajout d'icones -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	<body>
+		<!-- Barre de navigation -->
+		<nav>
+			<ul class="menu">
+				<!-- Redirection vers la page index -->
+			    <li>
+			    	<a href="../index.html"><i class="fa fa-fw fa-home"></i> Accueil</a>
+			    </li>
+
+
+			    <!-- Redirection vers les sous éléments de la section hacking -->
+			    <li class="documents">
+					<a href="#">Hacking</a>
+					<div class="documents-content">
+						<a href="bdh.html">Les bases du hacking</a>
+						<a href="virus.html">Les virus</a>
+						<a href="mdp.html">Les mots de passe</a>
+					</div>
+				</li>
+
+				<!-- Redirection vers la page se protéger -->
+				<li>
+					<a href="se-proteger.html">Se protéger</a>
+				</li>
+
+				<li class="documents">
+					<a href="#">Plus</a>
+					<div class="documents-content">
+						<a href="contact.html">Contact</a>
+						<a href="questions.html">Questions</a>
+						<a href="qsn.html">Qui Sommes-nous</a>
+							
+					</div>
+				</li>				
+
+				<li class="produits">
+					<a href="produits.html">Produits</a>
+				</li>
+
+				<!-- Redirection vers la page de connexion -->
+				<li>
+					<a href="connexion.html">Connexion</a>
+				</li>
+			</ul>
+		</nav>
+	
+	    <!-- Contenu de la page -->
+		<div id="texte">
+			<h1>Les mots de passe</h1>
+		
+			<h2>Les mots de passe :</h2>
+			<p>Aujourd’hui, les mots de passe permettent de <strong>protéger</strong> vos comptes. Toutes vos données sont en
+				partie protégées grâce à ce bout de code. Ils sont donc devenus essentiels. Malheureusement, les
+				données valent de l’or aujourd’hui, et plusieurs personnes piratent vos mots de passe pour avoir
+				accès à votre compte en banque, votre compte Facebook …
+				Il est donc essentiel de bien <strong>choisir son mot de passe</strong> afin que ce dernier soit difficile à trouver
+				pour une personne mal intentionnée.
+				Avant de voir comment créer un bon mot de passe, nous allons voir comment les pirates trouvent
+				vos mots de passe.
+			</p>
+			<h2>Le stockage des mots de passe</h2>
+			<p>Lorsque vous vous créez un compte sur Facebook, votre nom, votre prénom, votre adresse email et votre mot de passe sont stockés dans une base de données. Mais les mots de passe sont hachés c’est-à-dire qu’ils ne sont pas écrits de manière brute.
+			Que se passe-t-il alors :</p>
+				<ol>
+					<li>En premier, vous entrez votre mot de passe dans le formulaire</li>
+					<li>Suite à cela, Facebook va procéder en 3 étapes</li>
+					<ul>
+						<li>Il va générer ce que l'on appelle un Salt c'est-à-dire une suite de caractères aléatoires</li>
+						<li>Ensuite, il va concaténer le mot de passe brut et la Salt</li>
+						<li>Enfin, il va créer le hash du Salt et du mot de passe pour rendre votre mot de passe plus sûr</li>
+					</ul>
+				</ol>
+
+			<p> Par exemple, si vous entrez comme mot de passe «Test123», Facebook va le stocker de la
+			manière suivante :</p>
+
+				<ol>
+					<li>Il va générer un Salt : Efdot48dsc<br/><br /></li>
+					
+					<li>Il va concaténer le mot de passe et le Salt : Test123 + Efdot48dsc (Test123Efdot48dsc)<br/>
+					<br/> </li>
+					
+					
+					<li>Il hash le tout(Test123Efdot48dsc) ce qui donne :
+						<i>$argon2i$v=19$m=1024,t=1,p=1$RWZkb3Q0ODk0Ng$l84U/RD2XodjviAdNDRcQcmMa8or5
+						J1nG1MRRmWfW64</i>
+					</li>
+				</ol>
+			<p> Ainsi, même si un pirate a accès à la base de données de Facebook, il n’aura pas votre mot de
+			passe, car ce dernier est hashé et ne peut être déchiffré.
+			<br />
+			C’est-à-dire qu’avec : 
+			<br>
+			<i>$argon2i$v=19$m=1024,t=1,p=1$RWZkb3Q0ODk0Ng$l84U/RD2XodjviAdNDRcQcmMa8or5J1nG1
+			MRRmWfW64</i>	
+			<br/>
+			Le pirate ne pourra pas retrouver Test123 .
+			</p>
+
+			<h2>Comment les pirates trouvent les mots de passe</h2>
+			<p>
+			Mais même s’il n’a pas votre mot de passe, le pirate à votre adresse email, votre nom et votre
+			prénom. Cela peut lui suffira pour trouver votre mot de passe.
+			<br/>
+			Mais alors, comment font-ils ?
+			<br/>
+			Non, ils ne vont pas tester les mots de passe 1 par 1.
+			<br/>
+			Ils vont utiliser un <strong>dictionnaire</strong> : c’est un fichier texte avec des millions de mots de passe et grâce à
+			un <strong>algorithme</strong>, le pirate va pouvoir tester des milliers de mots de passe à la seconde et par
+			malchance trouver le vôtre si ce dernier est trop simple.
+			</p>
+		</div> <!-- fin division id="texte" -->
+
+		<!-- Pied de page -->
+		<footer>
+			<!-- Colonne de gauche -->
+			<ul>
+				<li><h3>MENTIONS</h3></li>
+				<li><a href="mentions-legales.html">Mentions légales</a><li>
+			</ul>
+
+			<!-- Colonne du milieu -->
+			<ul class="navigation">
+				<li><h3>NAVIGATION</h3></li>
+
+				<!-- Redirection vers les pages du site-->
+				<li><a href="qsn.html">Qui Sommes-nous</a></li>
+				<li><a href="virus.html">Les virus</a></li>
+				<li><a href="mdp.html">Les mots de passe</a></li>
+				<li><a href="se-proteger.html">Se protéger</a></li>
+				<li><a href="contact.html">Contact</a></li>
+
+
+			</ul>
+
+			<!-- Colonne de droite -->
+			<ul class="socialmedia">
+	            <li><h3>SUIVEZ-NOUS</h3></li>
+	            
+	            <li>
+	            	<span class="facebook">
+	                	<img src="../images/facebook.png" alt="Image Facebook">  
+	           		</span>
+	           	</li>
+
+	            <li>
+	            	<span class="twitter">
+	               		<img src="../images/twitter.png" alt="Image Twitter"> 
+	            	</span>
+	        	</li>
+
+	        	<li>
+		            <span class="instagram" > 
+		                <img src="../images/instagram2.png" alt="Image Instagram">
+		            </span>
+	        	</li>
+        	</ul>
+
+        	<!-- Spécification des droits -->
+        	<p class="copyright">Tous droits réservés © 2018-2019</p>
+		</footer>
+
+	</body>
+</html>

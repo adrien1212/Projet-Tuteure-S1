@@ -2,63 +2,172 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" >
-		<title>test</title>
-		<link rel="stylesheet" href="styles\index.css">
+		<title>Accueil</title>
 
-		<link rel="stylesheet" href="styles\navbar.css">
-
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Slab|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="styles/styles.css">
 
 
+		<!--- Polices google font utilisées -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
+		<meta name="author" content="HackerGroups">
+		<meta name="description" content="**** est un site pour les passionnés de sécurité informatique. Apprennez à vous proteger contre les menaces.">
 
-<!--- Polices google font utilisées -->
-
+		<!-- lien pour ajout d'icones -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
 	<body>
-		<!-- Création du menu déroulant-->
-		<nav >
+		<!-- Barre de navigation -->
+		<nav>
 			<ul class="menu">
+				<!-- Redirection vers la page index -->
 			    <li>
-			    	<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+			    	<a href="index.html"><i class="fa fa-fw fa-home"></i> Accueil</a>
 			    </li>
 
-			    <li>
-			    	<a href="qsn.html">Qui Sommes-nous</a>
-			    </li>
 
-			    <li class="Documents">
-					<a href="bases-du-hacking" class="menuder">Hacking</a>
-						<div class="Documents-content">
-							<a href="#">Les bases du hacking</a>
-							<a href="#">Sous partie 1</a>
-							<a href="#">Sous partie 1</a>
-						</div>
+			    <!-- Redirection vers les sous éléments de la section hacking -->
+			    <li class="documents">
+					<a href="#">Hacking</a>
+					<div class="documents-content">
+						<a href="pages/bdh.html">Les bases du hacking</a>
+						<a href="pages/virus.html">Les virus</a>
+						<a href="pages/mdp.html">Les mots de passe</a>
+					</div>
 				</li>
 
+				<!-- Redirection vers la page se protéger -->
 				<li>
-					<a href="se-proteger.html">Se protéger</a>
+					<a href="pages/se-proteger.html">Se protéger</a>
 				</li>
 
+				<li class="documents">
+					<a href="#">Plus</a>
+					<div class="documents-content">
+						<a href="pages/contact.html">Contact</a>
+						<a href="pages/questions.html">Questions</a>
+						<a href="pages/qsn.html">Qui Sommes-nous</a>
+							
+					</div>
+				</li>
+				
+				<li class="produits">
+					<a href="pages/produits.html">Produits</a>
+				</li>
+
+				<!-- Redirection vers la page de connexion -->
 				<li>
-					<a href="contact-questions">Contact et Questions</a>
-				</li>
-
-				<li class="forum">
-					<a href="forum-html">Forum</a>
-				</li>
-
-				<li>
-					<a class="Connexion" href="connexion.html">Connexion</a>
+					<a href="pages/connexion.html">Connexion</a>
 				</li>
 			</ul>
 		</nav>
 
-		<div class="container">
-			<p class="information">Ceci est un site fictif !</p>
-			<img src="images/cyber-security-2296269_1280.jpg">
-		</div>	
+        <!-- Contenu de la page index -->
+        <div id="index">
+	        <!-- Introduction -->
+			<div class="intro-colonnes">
+				<div class="intro-colonne-gauche">
+					<div class="intro-content">
+						<h1>Bulma is an open source CSS framework based on Flexbox and used by more than 100,000 developers.</h1>
+					</div>
+					<p class="intro-code">Il faut 20 ans pour construire une réputation 
+					et à quelques minutes de cyber-incident ruiner
+					</p>
+					
+				</div>
+				<div class="intro-colonne-droit">
+					<div class="intro-content">
+						<img class="intro-image" src="images/securite.svg" alt="flat securite">
+					</div>
+				</div>
+			</div>
+
+	        <!-- Image triangle -->
+	        <div>
+				<p class="texte-triangle ">Ceci est un site fictif</p>
+		        	
+				<img class="svg-triangle" src="images/triangle.svg" alt="triangle">
+			</div>
+			
+
+	        <!-- Redirection via aux images à gauche de l'écran -->
+	        
+
+			<div class="content-redirection">
+				<div class ="image-texte">
+					<a href="pages/virus.html">
+						<img class="image-redirection" src="images/virus.png" alt="Icone virus">
+						<p class="titre-redirection">LES VIRUS</p>
+					</a>
+				</div>
+				<div class ="image-texte">
+					<a href="pages/mdp.html">
+						<img class="image-redirection" src="images/mdp.png" alt="Icone clé">
+						<p class="titre-redirection">LES MOTS DE PASSE</p>
+					</a>
+				</div>
+				<div class ="image-texte">
+					<a href="pages/se-proteger.html">
+						<img class="image-redirection" src="images/proteger.png" alt="Icone protection">
+						<p class="titre-redirection">SE PROTEGER</p>
+					</a>
+				</div>
+			</div>
+
+		</div> <!-- fin id="index" -->
+
+	
+
+		<!-- Pied de page -->
+		<footer>
+			<!-- Colonne de gauche -->
+			<ul>
+				<li><h3>MENTIONS</h3></li>
+				<li><a href="pages/mentions-legales.html">Mentions légales</a><li>
+			</ul>
+
+			<!-- Colonne du milieu -->
+			<ul class="navigation">
+				<li><h3>NAVIGATION</h3></li>
+
+				<!-- Redirection vers les pages du site-->
+				<li><a href="pages/qsn.html">Qui Sommes-nous</a></li>
+				<li><a href="pages/virus.html">Les virus</a></li>
+				<li><a href="pages/mdp.html">Les mots de passe</a></li>
+				<li><a href="pages/se-proteger.html">Se protéger</a></li>
+				<li><a href="pages/contact.html">Contact</a></li>
+
+
+			</ul>
+
+			<!-- Colonne de droite -->
+			<ul class="socialmedia">
+	            <li><h3>SUIVEZ-NOUS</h3></li>
+	            
+	            <li>
+	            	<span class="facebook">
+	                	<img src="images/facebook.png" alt="Image Facebook">  
+	           		</span>
+	           	</li>
+
+	            <li>
+	            	<span class="twitter">
+	               		<img src="images/twitter.png" alt="Image Twitter"> 
+	            	</span>
+	        	</li>
+
+	        	<li>
+		            <span class="instagram" > 
+		                <img src="images/instagram2.png" alt="Image Instagram">
+		            </span>
+	        	</li>
+        	</ul>
+
+        	<!-- Spécification des droits -->
+        	<p class="copyright">Tous droits réservés © 2018-2019</p>
+		</footer>
 
 	</body>
 </html>

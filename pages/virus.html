@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" >
+		<title>Virus</title>
+
+		<link rel="stylesheet" href="../styles/styles.css">
+
+
+		<!--- Polices google font utilisées -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+		<meta name="author" content="HackerGroups">
+		<meta name="description" content="Apprenez à vous protéger contre les virus">
+
+		<!-- lien pour ajout d'icones -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	</head>
+	<body>
+		<!-- Barre de navigation -->
+		<nav>
+			<ul class="menu">
+				<!-- Redirection vers la page index -->
+			    <li>
+			    	<a href="../index.html"><i class="fa fa-fw fa-home"></i> Accueil</a>
+			    </li>
+
+
+			    <!-- Redirection vers les sous éléments de la section hacking -->
+			    <li class="documents">
+					<a href="#">Hacking</a>
+					<div class="documents-content">
+						<a href="bdh.html">Les bases du hacking</a>
+						<a href="virus.html">Les virus</a>
+						<a href="mdp.html">Les mots de passe</a>
+					</div>
+				</li>
+
+				<!-- Redirection vers la page se protéger -->
+				<li>
+					<a href="se-proteger.html">Se protéger</a>
+				</li>
+
+				<li class="documents">
+					<a href="#">Plus</a>
+					<div class="documents-content">
+						<a href="contact.html">Contact</a>
+						<a href="questions.html">Questions</a>
+						<a href="qsn.html">Qui Sommes-nous</a>
+							
+					</div>
+				</li>
+
+				<li class="produits">
+					<a href="produits.html">Produits</a>
+				</li>
+
+				<!-- Redirection vers la page de connexion -->
+				<li>
+					<a href="connexion.html">Connexion</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="texte">
+			<h1>Les virus</h1>
+		
+			<h2>Comment fonctionne un <strong>antivirus</strong> :</h2>
+			<p>
+				Le but de l’antivirus est de scanner vos fichiers afin de savoir s’ils contiennent un ou plusieurs
+				virus.
+				<br/>
+				Pour ce faire, l’antivirus procède à différents scans : 
+			</p>
+			<ul>
+				<li><h3>Les scans par signature : </h3>
+					<p>
+						Dans le monde antivirus, une <strong>signature</strong> est une suite de caractères qui permet d’identifier un virus de
+						manière unique (comme la signature d’une lettre qui permet de reconnaître l’auteur).
+						Et c’est cette signature qui permet d’identifier les potentiels virus dans un fichier.
+						En effet, ces signatures sont stockées dans des bases de données de la société du produit et lors
+						de <strong>l’analyse des fichiers</strong>, l’antivirus va interroger la base de données afin de savoir si une ou
+						plusieurs signatures sont présentes dans le fichier.
+						<br/>
+						Mais cela ne suffit pas, car de nombreuses signatures ne sont pas répertoriées dans les bases de
+						données de la société.
+						<br/>
+					</p>
+				</li>
+					
+				<li><h3>Les <strong>scans heuristiques</strong> : </h3>
+					<p>
+						L'analyse heuristique est similaire à l'analyse de signatures, à la différence qu'au lieu de rechercher
+						des signatures spécifiques, l'analyse heuristique <strong>recherche</strong> certaines <strong>instructions ou commandes
+						d'un programme</strong> qui ne figurent pas dans les programmes d'applications classiques. Ce scan se fait
+						dans une partie de votre disque dur totalement sécurisée. En effet, l’antivirus va exécuter le
+						programme et va observer ce qu’il fait.
+						<br/>
+						Si l’antivirus remarque un <strong>comportement suspect</strong>, il vous avertira et mettra le fichier en
+						<strong>quarantaine</strong> afin que ce dernier ne contamine pas votre pc.
+					</p>
+				</li>
+			</ul>	
+			<p>
+			Aller plus loin :
+				<a href="https://www.leblogduhacker.fr/comment-fonctionne-un-antivirus/" target="_blank">https://www.leblogduhacker.fr/comment-fonctionne-un-antivirus/</a>
+			</p>
+		</div> <!-- fin division id="texte" -->
+
+
+
+				<!-- Pied de page -->
+		<footer>
+			<!-- Colonne de gauche -->
+			<ul>
+				<li><h3>MENTIONS</h3></li>
+				<li><a href="mentions-legales.html">Mentions légales</a><li>
+			</ul>
+
+			<!-- Colonne du milieu -->
+			<ul class="navigation">
+				<li><h3>NAVIGATION</h3></li>
+
+				<!-- Redirection vers les pages du site-->
+				<li><a href="qsn.html">Qui Sommes-nous</a></li>
+				<li><a href="virus.html">Les virus</a></li>
+				<li><a href="mdp.html">Les mots de passe</a></li>
+				<li><a href="se-proteger.html">Se protéger</a></li>
+				<li><a href="contact.html">Contact</a></li>
+
+
+			</ul>
+
+			<!-- Colonne de droite -->
+			<ul class="socialmedia">
+	            <li><h3>SUIVEZ-NOUS</h3></li>
+	            
+	            <li>
+	            	<span class="facebook">
+	                	<img src="../images/facebook.png" alt="Image Facebook">  
+	           		</span>
+	           	</li>
+
+	            <li>
+	            	<span class="twitter">
+	               		<img src="../images/twitter.png" alt="Image Twitter"> 
+	            	</span>
+	        	</li>
+
+	        	<li>
+		            <span class="instagram" > 
+		                <img src="../images/instagram2.png" alt="Image Instagram">
+		            </span>
+	        	</li>
+        	</ul>
+
+        	<!-- Spécification des droits -->
+        	<p class="copyright">Tous droits réservés © 2018-2019</p>
+		</footer>
+		
+	</body>
+</html>
